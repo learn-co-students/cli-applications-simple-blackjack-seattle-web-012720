@@ -38,6 +38,7 @@ def hit?(card_total)
   elsif input != 'h' || input != 's'
     invalid_command
     prompt_user
+    get_user_input
   end
 card_total
 end
@@ -51,6 +52,12 @@ end
 #####################################################
 
 def runner
-  # code runner here
+  welcome
+  card_total = initial_round
+  hit?(card_total)
+  display_card_total(card_total)
+  prompt_user
+  if card_total > 21
+  end_game
 end
-    
+end  
