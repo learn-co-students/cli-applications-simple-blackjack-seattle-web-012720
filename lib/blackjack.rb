@@ -39,8 +39,18 @@ def hit?(arg)
      arg+=deal_card
   elsif (input != 's')
     invalid_command
+<<<<<<< HEAD
     hit?(arg)
   end
+=======
+  end
+  #else if (input == 's')
+  #   arg = arg
+  # else
+  #   invalid_command
+  # end
+  prompt_user
+>>>>>>> c5bb125f98c82ae543bf339b74a5eca99a78a097
   arg
 end
 
