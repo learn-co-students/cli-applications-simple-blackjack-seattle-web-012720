@@ -35,7 +35,7 @@ def hit?(card_total)
   until(input == "s" or input == "h")
     invalid_command
     prompt_user
-    input = get_user_input
+    input = gets.chomp
   end
   
   if input == "s"
@@ -51,20 +51,16 @@ def invalid_command
   puts "Please enter a valid command"
 end
 
-#####################################################
-# get every test to pass before coding runner below #
-#####################################################
-
 def runner
   welcome
   card_count = initial_round
-  
+
   until card_count >= 21 do
     new = hit?(card_count)
     card_count = new
-    display_card_total(new)
+    display_card_total(card_count)
   end
-  end_game(new)
+  end_game(card_count)
 end
-    
-#puts runner
+
+puts runner
