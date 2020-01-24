@@ -65,3 +65,7 @@ def runner
   end_game(hand)
 end
     
+# If I wanted to create a game out of this I would make a method to create a dealer hand.
+# Dealer hand would be very similar, but it would use an if / else statement instead of user input.
+# I'd say if dealer_hand is less than 15 hit, else stay.' 
+# Then compare dealer_hand to player_hand and whoever is close to 21 wins.
